@@ -1,16 +1,17 @@
-/*
-color:#2C313A;   dark gray
-color:#CE4E3B;   red
-color:#98D9E1;   blue
-color:#EEE7EA;   white
-color:#7D7D7D;   light gray
-*/
+/* colors */
+:root{
+    --black: #2C313A;
+    --gray: #7D7D7D;
+    --red: #CE4E3B;
+    --blue: #98D9E1;
+    --white: #EEE7EA;
+}
 
 
 
 /* structure */
 body{
-    background-color:#2C313A;
+    background-color: var(--black);
     margin:0px;
 }
 .container{
@@ -22,7 +23,7 @@ footer {
     padding-top:0px;
 }
 .stripe{
-    border-left:solid 10px #CE4E3B;
+    border-left:solid 10px var(--red);
 }
 
 
@@ -41,7 +42,7 @@ html {
     font-size: 120%;
 }
 body {
-    color: #f7f3f5;
+    color: var(--white);
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     line-height: 1.75;
@@ -61,8 +62,7 @@ h3 {font-size: 2.369rem;}
 h4 {font-size: 1.777rem;}
 h5 {font-size: 1.333rem;}
 p {margin-bottom: 1rem;}
-a {color: #98D9E1;}
-a:hover {color:#CE4E3B;}
+a {color: var(--blue);}
 .footer-text {font-size: 0.75rem;}
 
 
