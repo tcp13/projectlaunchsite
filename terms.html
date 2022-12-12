@@ -19,10 +19,13 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 	</head>
 	<body class="stripe">
 		<div class="container">
-			<img src="icons/rocket-white.png" alt="" style="width:10%;margin-top:5%;">
+			<img src="icons/rocket-white.png" alt="" style="width:5rem; margin: 2rem 0 8rem 0;">
 			<h1 style="margin-top:0px;">The Fine Print</h1>
 
 			<p>Please read these Terms of Use carefully before using www.projectlaunchsite.com (the "Website") created and maintained by Tyler Puckett (collectively with his agents and affiliates, "Project Launch Site"). By accessing Project Launch Site's content, products, features, services, and applications in any manner, you agree to these legally binding Terms of Use and all other operating policies that may be published by Project Launch Site and updated without notice to you.</p>
@@ -64,8 +67,14 @@
 
 			<h2>Privacy Policy</h2>
 			<ul>
-				<li>Project Launch Site does not collect any user data from this Website.</li>
+				<li>Project Launch Site does not collect any personally-identifiable user data from this Website.</li>
 				<li>Project Launch Site does not use any cookies on this Website.</li>
+				<li>For development purposes, Project Launch site collects minimal analytics data.</li>
+				<ul>
+					<li>This Website collects the following data: timestamp, URL, referrer, screen width, preferred language, operating system, and web browser</li>
+					<li>This Website does not collect any IP addresses or location information.</li>
+					<li>All analytics data is completely anonymous.</li>
+				</ul>
 				<li>Project Launch site will never share your personal information with anyone unless we reasonably believe such action is necessary to satisfy any applicable law or enforce our Terms of Use.</li>
 			</ul>
 
@@ -91,6 +100,10 @@
 	</body>
 	
 	<footer>
-		<p class="footer-text"><strong>Project Launch Site v1.0</strong><br>Tyler Puckett © 2022<br><a href="/terms.html">Terms of Use</a></p>
+		<p class="footer-text"><strong>Project Launch Site v1.0</strong><br>Tyler Puckett © 2022<br><a href="/terms.html">Terms of Use</a> | <a href="https://tyler-puckett.com/#page-section-627c16fe9e1aa7738a176d15" target="_blank">Feedback</a></p>
+
+		<!-- scripts -->
+		<script src="script.js"></script>
+		<script src="analytics.js"></script>
 	</footer>
 </html>
