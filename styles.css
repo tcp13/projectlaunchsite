@@ -13,6 +13,7 @@
 body{
     background-color: var(--black);
     margin:0px;
+    word-wrap: break-word;
 }
 .container{
     padding:8%;
