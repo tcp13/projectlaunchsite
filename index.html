@@ -9,71 +9,73 @@
 		<!-- seo -->
 		<meta name="title" content="Project Launch Site">
 		<meta name="description" content="Welcome to the home of my weirdest side projects and half-baked ideas.">
-		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://projectlaunchsite.com/">
-		<meta property="og:title" content="Project Launch Site">
-		<meta property="og:description" content="Welcome to the home of my weirdest side projects and half-baked ideas.">
-		<meta property="og:image" content="rocket-thumbnail.jpg">
-		<meta property="twitter:card" content="summary_large_image">
-		<meta property="twitter:url" content="https://projectlaunchsite.com/">
-		<meta property="twitter:title" content="Project Launch Site">
-		<meta property="twitter:description" content="Welcome to the home of my weirdest side projects and half-baked ideas.">
-		<meta property="twitter:image" content="rocket-thumbnail.jpg">
 
-		<!-- styles -->
-		<link rel="stylesheet" href="styles.css">
-
-		<!-- favicons -->
-		<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-		<link rel="manifest" href="favicons/site.webmanifest">
-		
-		<!-- Google fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-
-		<!-- jQuery -->
-		<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 	</head>
-	<body class="stripe">
-		<div class="container" style="min-height:100vh;padding-bottom:0px;">
-			<img src="icons/rocket-white.png" alt="" style="width:5rem; margin: 2rem 0 8rem 0;">
-			<h1>Project Launch Site</h1>
-			<p>Welcome to the home of my weirdest side projects and half-baked ideas. My goal here is to launch small web apps and micro-startups that solve problems in unconventional ways. They're meant to be simple, pragmatic, and even a bit whimsical. Crafted with care, these projects prioritize user privacy, accessibility, and other modern best practices.</p>
-		</div>
-		<div class="container" style="padding-top:0px;">
+	<body id="space">
+        <span id="rocket">🚀</span>
+    </body>
+    <footer>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                height: 100vh;
+                /* background: linear-gradient(200deg, #271200, #000); */
+                background: linear-gradient(200deg, #271200 10%, #000 50%);
+            }
+            #rocket {
+                font-size: 24px;
+                position: absolute;
+            }
+            #space {
+                width: 100vw;
+                height: 100vh;
+                position: relative;
+                overflow: hidden;
+                }
+            .star {
+                position: absolute;
+                width: 2px;
+                height: 2px;
+                background: white;
+                border-radius: 50%;
+            }
+        </style>
+        <script>
+            // rocket cursor
+            let oRocket = document.querySelector('#rocket');
+            let deg = 0, ex = 0, ey = 0, vx = 100, vy = 100, count = 0;
+            window.addEventListener('mousemove', (e) => {
+            ex = e.clientX - oRocket.offsetLeft - oRocket.offsetWidth / 2;
+            ey = e.clientY - oRocket.offsetTop - oRocket.offsetHeight / 2;
+            deg = Math.atan2(ey, ex)  / (2 * Math.PI) * 360 + 45;
+            count = 0;
+            });
+            function move() {
+            oRocket.style.transform = `rotate(${deg}deg)`;
+            if (count < 50) {
+                vx += ex / 50;
+                vy += ey / 50;
+            }
+            oRocket.style.left = vx + 'px';
+            oRocket.style.top = vy + 'px';
+            count++;
+            }
+            setInterval(move, 1);
 
-			<h2><a href="https://thegistnews.net" target="_blank">TheGistNews.net</a></h2>
-			<p>News for people who hate news. No Ads. No Popups. No Paywalls. No Opinions. No Speculation. No Breaking News. No Infinte Scrolling. Just facts!</p>
 
-			<h2><a href="https://wikipod.net" target="_blank">WikiPOD.net</a></h2>
-			<p>Print-on-Demand from Wikipedia. Get paperback books delivered by mail.</p>
-
-			<h2><a href="https://haiku.ist" target="_blank">Haiku.ist</a></h2>
-			<p>Powered by GPT-3, this simple web app uses AI to generate haiku poetry from any topic.</p>
-
-			<h2><a href="https://optoutletter.com" target="_blank">OptOutLetter.com</a></h2>
-			<p>Stop junk mail by sending opt out requests! This free tool generates opt out letters that assert your rights by citing specific privacy laws and consumer protections.</p>
-
-			<h2><a href="https://whyismypoop.com" target="_blank">WhyIsMyPoop.com</a></h2>
-			<p>Poop is a treasure trove of health information! “Why is My Poop…” is a simple reference tool for understanding abnormal poop, including when to be concerned or ask a doctor.</p>
-
-			<h2><a href="https://walruspettingzoo.com" target="_blank">WalrusPettingZoo.com</a></h2>
-			<p>This silly clicker game puts you in control of a walrus petting zoo. Welcome guests, invest in upgrades, and fend off the occasional zombie!</p>
-
-			<h2><a href="https://whereshouldieat.today" target="_blank">WhereShouldIEat.today</a></h2>
-			<p>"Where Should I Eat Today?" solved a personal problem of keeping track of my long list of favorite local restaurants. See at a quick glance which of your favorite restaurants are currently open.</p>
-
-		</div>
-	</body>
-	
-	<footer>
-		<p class="footer-text"><strong>Project Launch Site v1.0</strong><br>Tyler Puckett © 2023<br><a href="/terms.html">Terms of Use</a> | <a href="https://tyler-puckett.com/#page-section-627c16fe9e1aa7738a176d15" target="_blank">Feedback</a></p>
-
-		<!-- scripts -->
-		<script src="script.js"></script>
-		<script src="analytics.js"></script>
-	</footer>
+            // stars
+            const sky = document.getElementById('space');
+            for (let i = 0; i < 200; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.top = Math.random() * 100 + 'vh';
+            star.style.left = Math.random() * 100 + 'vw';
+            star.style.transform = `scale(${Math.random() * 1.5})`;
+            sky.appendChild(star);
+            }
+        </script>
+    </footer>
 </html>
